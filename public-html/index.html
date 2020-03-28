@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+<head>
+	<title>To-Do list</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="module.js"></script>
+</head>
+<body>
+
+	<div ng-controller="ctr" style="width: 40%;margin: auto; background-color: purple;color: white;padding: 10px">
+
+		<ul ng-repeat="x in list" style="list-style: none;margin-left: -30px">
+			<li style="border-bottom: 1px solid grey;height: 30px">	{{ x |uppercase }}  
+				<span style="float: right;cursor: pointer;" ng-click="delete($index)">&times;</span>
+			</li>
+		</ul>
+		<p align="center" style="margin-top: 50px;">
+			<input type="text" name="" style="height: 30px" ng-model="new">
+			<button style="background-color: green;color:white;border: none;height: 35px" ng-click="addItem()">Add</button>
+		</p>
+	</div>
+
+</body>
+</html>
